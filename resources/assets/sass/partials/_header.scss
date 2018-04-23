@@ -1,0 +1,60 @@
+header {
+	width: 100%;
+}
+
+
+#socialLinks {
+	height: 73px;
+	.col-4 {
+		height: 100%;
+		padding: 0;
+		overflow: hidden;
+		a {
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+
+#banner {
+	height: 310px;
+	position: relative;
+	img {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		height: 100%;
+	}
+	.logo {
+		position: absolute;
+		height: 20%;
+		top: 32%;
+    	left: 28%;
+	}
+	p {
+		font-size: 2.5em;
+		position: absolute;
+		top: 35%;
+    	width: 30%;
+    	left: 53%;
+    	line-height: 1em;
+	}
+}
+
+#menu {
+	height: 73px;
+	a {
+		display: block;
+		width: 25%;
+		height: 100%;
+		line-height: 77px;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 1.4em;
+		&:nth-child(1){background-color: #fff}
+		&:nth-child(2){background-color: #eef4f4}
+		&:nth-child(3){background-color: #b0e0c8}
+		&:nth-child(4){background-color: #f48f8f}
+	}
+}

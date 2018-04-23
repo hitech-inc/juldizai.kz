@@ -1,0 +1,18 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import "fonts";
+@import "variables";
+@import "mixins";
+@import 'clear';
+
+// HEADER
+
+@import "partials/header";
+
+// INDEXPAGE
+
+@import "index";
+
+// FOOTER
+
+@import "partials/footer";
+
