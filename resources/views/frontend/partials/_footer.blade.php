@@ -4,12 +4,15 @@
 			<div class="col-6">Мы в соцсетях</div>
 			<div class="col-6">Подпишитесь на нашу рассылку</div>
 			<div class="col-6">
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
+				<div>
+					<a href="https://www.instagram.com/bi_juldizai_fond/" target="_blank" title="instagram"><img src="/img/icons/icons8-instagram-48.png" alt="" style="max-width: 100%"></a>
+				</div>
+				<div>
+					<a href="https://www.facebook.com/BIZhuldyzai/" target="_blank" title="facebook"><img src="/img/icons/icons8-facebook-48.png" alt="" style="max-width: 100%"></a>
+				</div>
+				<div>
+					<a href="https://www.youtube.com/channel/UClPHkASw7zZ-CBnXZ9LsosQ?view_as=subscriber" target="_blank" title="youtube"><img src="/img/icons/icons8-youtube-play-48.png" alt="" style="max-width: 100%"></a>
+				</div>
 			</div>
 			<div class="col-6">
 				<form action="">

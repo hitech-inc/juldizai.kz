@@ -6812,7 +6812,7 @@ footer {
         justify-content: space-between; }
         #footerTop > div .col-6:nth-child(3) div {
           flex: 1;
-          background-color: #fff;
+          background-color: transparent;
           margin: 1% 2%; }
       #footerTop > div .col-6:nth-child(4) form {
         width: 100%;
