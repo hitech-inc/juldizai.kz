@@ -81,17 +81,21 @@ $('.my-item').css('transition','top 0.5s ease, width 0.5s ease');
 
 
 $('#sliderItem-'+ topId).css({'top': topSlide,
-                             'width': "95%",
-                            'z-index':'4'});
+                             'width': "97%",
+                            'z-index':'4',
+                            '-webkit-filter': 'grayscale(100%)'});
 $('#sliderItem-'+ centerId).css({'top': centerSlide,
                              'width': "100%",
-                            'z-index':'6'});
+                            'z-index':'6',
+                            '-webkit-filter': 'unset'});
 $('#sliderItem-'+ bottomId).css({'top': bottomSlide,
-                             'width': "95%",
-                             'z-index':'3'});
+                             'width': "97%",
+                             'z-index':'3',
+                            '-webkit-filter': 'grayscale(100%)'});
 $('#sliderItem-'+ hideId).css({'top': hideSlide,
                              'width': "90%",
-                             'z-index':'2'});
+                             'z-index':'2',
+                            '-webkit-filter': 'grayscale(100%)'});
 
 /***********DRAG SCROLL ***************/
 $("#scroll-bar").draggable({
@@ -108,42 +112,51 @@ $("#scroll-bar").draggable({
         var position = $(this).position();
         var y = position.top/scrollHeight*100;
         console.log(y);
-        if(y >= 0 && y <= 25) {
+        if(y >= 0 && y <= 13) {
+            var Y = "0%";
             topId = 0,
             centerId = 1,
             bottomId = 2,
             hideId = 3;
         }
-        if(y > 25 && y <= 50) {
+        if(y > 13 && y <= 48) {
+            var Y = "26%";
             topId = 1,
             centerId = 2,
             bottomId = 3,
             hideId = 0;
         }
-        if(y > 50 && y <= 75) {
+        if(y > 48 && y <= 87) {
+            var Y = "56%";
             topId = 2,
             centerId = 3,
             bottomId = 0,
             hideId = 1;
         }
-        if(y > 75 && y <= 100.1) {
+        if(y > 87 && y <= 105) {
+            var Y = "84%";
             topId = 3,
             centerId = 0,
             bottomId = 1,
             hideId = 2;
         }
         $('#sliderItem-'+ topId).css({'top': topSlide,
-                                     'width': "95%",
-                                    'z-index':'4'});
+                                     'width': "97%",
+                                    'z-index':'4',
+                                    '-webkit-filter': 'grayscale(100%)'});
         $('#sliderItem-'+ centerId).css({'top': centerSlide,
                                      'width': "100%",
-                                    'z-index':'6'});
+                                    'z-index':'6',
+                                    '-webkit-filter': 'unset'});
         $('#sliderItem-'+ bottomId).css({'top': bottomSlide,
-                                     'width': "95%",
-                                     'z-index':'3'});
+                                     'width': "97%",
+                                     'z-index':'3',
+                                    '-webkit-filter': 'grayscale(100%)'});
         $('#sliderItem-'+ hideId).css({'top': hideSlide,
                                      'width': "90%",
-                                     'z-index':'2'});
+                                     'z-index':'2',
+                                    '-webkit-filter': 'grayscale(100%)'});
+        $('#scroll-bar').css('top', Y);
 
     }
 });

@@ -15,4 +15,10 @@
 		<img src="/img/header/logo.png" alt="logo" class="logo">
 		<p>Сделай первый шаг вместе с нами</p>
 	</div>
+	<div class="row" id="menu">
+		<a href="#r">О нас</a>
+		<a href="#e">Проекты</a>
+		<a href="#t">Хочу помочь</a>
+		<a href="#i">Нужна помощь</a>
+	</div>
 </div>	

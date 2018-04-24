@@ -10,10 +10,22 @@
 			</div>
 		</div>
 		<div class="col-6">
-			<div class="my-item">0</div>
-			<div class="my-item">1</div>
-			<div class="my-item">2</div>
-			<div class="my-item">3</div>
+			<div class="my-item">
+				<div class="left"><div class="black"></div></div>
+				<div class="right">	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat aperiam incidunt, odio eligendi sapiente, recusandae consequuntur, mollitia vitae nam ipsum in! Voluptas, culpa obcaecati ullam. 	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, reprehenderit!</div>
+			</div>
+			<div class="my-item">
+				<div class="left"><div class="black"></div></div>
+				<div class="right">	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur excepturi perspiciatis culpa aliquid laudantium dolore velit eligendi alias soluta! Asperiores provident labore harum quisquam perspiciatis! 	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, iusto.</div>
+			</div>
+			<div class="my-item">
+				<div class="left"><div class="black"></div></div>
+				<div class="right">	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non numquam in, et porro, debitis obcaecati eum qui corrupti ut iure sint quisquam nostrum facilis laborum! 	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, veniam.</div>
+			</div>
+			<div class="my-item">
+				<div class="left"><div class="black"></div></div>
+				<div class="right">	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem distinctio sapiente nemo odio amet alias vitae fugit deleniti enim, placeat dolores dignissimos maxime ex repudiandae. 	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, quam.</div>
+			</div>
 		</div>
 		<div id="scroll-bar-wrap">
 			<div id="point-1" class="points"></div>
