@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="/css/owl.carousel.min.css">
 	<link rel="stylesheet" href="/css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="/css/app.css">
+	<link rel="stylesheet" href="/css/fontawesome-all.min.css">
 
 </head>
 <body>

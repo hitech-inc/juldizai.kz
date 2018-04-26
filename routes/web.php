@@ -11,6 +11,30 @@
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.index');
+// Route::get('/', function () {
+//     return view('frontend.index');
+// });
+
+// Frontend
+Route::get('/', 'SiteController@index');
+Route::get('/news/{id?}', 'SiteController@news');
+Route::get('/contacts', 'SiteController@contacts');
+Route::get('/mass-media-about-us', 'SiteController@massMedia');
+Route::get('/galleries/{id?}', 'SiteController@gallery');
+
+
+Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin', 'HomeController@index')->name('home');
+
+//Backend
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
+	Route::resource('contacts', 'ContactController');
+	Route::resource('menus', 'MenuController');
+	Route::resource('requisites', 'RequisiteController');
+	Route::resource('allNews', 'allNewController');
+	Route::resource('galleries', 'GalleryController');
+	Route::resource('massMediaAboutuses', 'massMediaAboutUsController');
+	Route::resource('testmenus', 'testmenuController');
 });

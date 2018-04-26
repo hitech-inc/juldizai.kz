@@ -21,7 +21,21 @@
 				</form>
 			</div>			
 		</div>
-		<p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+		<!-- <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p> -->
+		@foreach(App\Models\Requisite::getRequisites() as $requisite)
+			<h4 style="text-align: center; padding-top: 15px;">{{$requisite->title}}</h4>
+			<ul style="list-style: none;" class="requisites">
+				<li><a href="#">Оплата через:{{ $requisite->payment_via }}</a></li>
+				<li><a href="">WebMoney: {{ $requisite->payment_via }}</a></li>
+				<li><a href="">QIWI WALLET: {{ $requisite->qiwi_vallet }}</a></li>
+				<li><a href="">ЯНДЕКС ДЕНЬГИ: {{ $requisite->payment_money }}</a></li>
+				<li><a href="">РНН: {{ $requisite->rnn }}</a></li>
+				<li><a href="">Р/с: {{ $requisite->checking_account }}</a></li>
+				<li><a href="">Банк: {{ $requisite->bank }}</a></li>
+				<li><a href="">МФО: {{ $requisite->mfo }}</a></li>
+				<li><a href="">БИН: {{ $requisite->bin }}</a></li>
+			</ul>
+		@endforeach
 	</div>
 	<div id="footerBot">
 		<a href="#">О ДЦП</a>
