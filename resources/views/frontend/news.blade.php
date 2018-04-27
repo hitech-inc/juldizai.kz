@@ -14,7 +14,7 @@
 				@foreach($news as $new)
 				<div class="newsBlock">	
 					<div class="row">
-						<div class="col-4">
+						<div class="col-4" style="margin-top: 15px;">
 							<img src="/img/news/{{$new->img}}" alt="" style="max-width: 100%; border-radius: 15px; margin-bottom:15px;">
 						</div>
 						<div class="col-8" style="height: 240px; overflow: hidden; box-sizing: border-box; border: 10px solid transparent; position: relative;">
