@@ -10,6 +10,7 @@ use App\Models\Reqisite;
 use App\Models\allNew;
 use App\Models\Gallery;
 use App\Models\massMediaAboutUs as massMedia;
+use App\Models\Project;
 use App\Models\testmenu;
 
 class SiteController extends Controller
@@ -72,6 +73,12 @@ class SiteController extends Controller
     		//dd($gallery);
     		return view('frontend.gallery', compact('menus', 'gallery'));
     	}
+    }
+
+    public function projects()
+    {
+    	$projects = Project::all();
+    	return view('frontend.our-projects', compact('projects'));
     }
 
     public function getSubMenu()

@@ -21,7 +21,7 @@ Route::get('/news/{id?}', 'SiteController@news');
 Route::get('/contacts', 'SiteController@contacts');
 Route::get('/mass-media-about-us', 'SiteController@massMedia');
 Route::get('/galleries/{id?}', 'SiteController@gallery');
-
+Route::get('/our-projects', 'SiteController@projects');
 
 Auth::routes();
 
