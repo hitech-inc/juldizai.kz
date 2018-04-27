@@ -16,12 +16,24 @@ use App\Models\testmenu;
 class SiteController extends Controller
 {
 
-    public function index()
+    public function index(Request $request, $id = "")
     {
-    	$currentURL = \Request::segment(1);
-    	$menus = $this->getMenu();
-    	// dd($menus);
-    	return view('frontend.index', compact('menus', 'currentURL'));
+    	if (!$id)
+    	{
+    		$currentURL = \Request::segment(1);
+	    	$menus = $this->getMenu();
+	    	$projects = Project::take(4)->get();
+	    	$news =allNew::take(6)->get();
+	    	// $selectedNews = allNew::where('slug', $id)->first();
+	    	return view('frontend.index', compact('menus', 'currentURL', 'projects', 'news'));
+    	}
+    	else
+    	{
+    		$menus = $this->getMenu();
+    		$selectedNews = allNew::where('slug', $id)->first();
+    		//dd($selectedNews);
+    		return view('frontend.news-more', compact('selectedNews', 'menus'));
+    	}
     }
 
     public function contacts()

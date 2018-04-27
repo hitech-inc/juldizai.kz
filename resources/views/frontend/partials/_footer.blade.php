@@ -1,3 +1,11 @@
+<style>
+	.requisites{
+		float: left;
+	}
+	.requisites li{
+		display: block;
+	}
+</style>
 <div class="container">
 	<div id="footerTop">
 		<div class="row">
@@ -22,26 +30,34 @@
 			</div>			
 		</div>
 		<!-- <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p> -->
-		@foreach(App\Models\Requisite::getRequisites() as $requisite)
+		<div class="row">
+			@foreach(App\Models\Requisite::getRequisites() as $requisite)
 			<h4 style="text-align: center; padding-top: 15px;">{{$requisite->title}}</h4>
-			<ul style="list-style: none;" class="requisites">
+			<ul style="list-style: none; margin: 0 25px; width: 25%" class="requisites">
 				<li><a href="#">Оплата через:{{ $requisite->payment_via }}</a></li>
 				<li><a href="">WebMoney: {{ $requisite->payment_via }}</a></li>
-				<li><a href="">QIWI WALLET: {{ $requisite->qiwi_vallet }}</a></li>
-				<li><a href="">ЯНДЕКС ДЕНЬГИ: {{ $requisite->payment_money }}</a></li>
+				<li><a href="">QIWI WALLET: {{ $requisite->qiwi_wallet }}</a></li>
+			</ul>
+			<ul style="list-style: none; margin: 0 25px; width: 25%" class="requisites">
+				<li><a href="">ЯНДЕКС ДЕНЬГИ: {{ $requisite->yandex_money }}</a></li>
 				<li><a href="">РНН: {{ $requisite->rnn }}</a></li>
 				<li><a href="">Р/с: {{ $requisite->checking_account }}</a></li>
+			</ul>
+			<ul style="list-style: none; margin: 0 25px; width: 25%" class="requisites">
 				<li><a href="">Банк: {{ $requisite->bank }}</a></li>
 				<li><a href="">МФО: {{ $requisite->mfo }}</a></li>
 				<li><a href="">БИН: {{ $requisite->bin }}</a></li>
 			</ul>
 		@endforeach
+		</div>
 	</div>
 	<div id="footerBot">
-		<a href="#">О ДЦП</a>
-		<a href="#">Родителям</a>
-		<a href="#">Проекты</a>
-		<a href="#">Контакты</a>
-		<a href="#">О фонде</a>
+		<a href="/">Гавная</a>
+		<a href="/our-projects">Наши проекты</a>
+		<a href="/news">Новости</a>
+		<a href="/mass-media-about-us">СМИ о нас</a>
+		<a href="/galleries">Галерея</a>
+		<a href="/donations">Пожертвования</a>
+		<a href="/contacts">Контакты</a>
 	</div>
 </div>

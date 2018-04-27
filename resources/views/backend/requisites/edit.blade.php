@@ -13,7 +13,7 @@
                <div class="row">
                    {!! Form::model($requisite, ['route' => ['requisites.update', $requisite->id], 'method' => 'patch']) !!}
 
-                        @include('requisites.fields')
+                        @include('backend.requisites.fields')
 
                    {!! Form::close() !!}
                </div>

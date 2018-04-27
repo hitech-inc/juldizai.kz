@@ -14,6 +14,10 @@
     text-decoration: none;
 }
 
+.dropdown li a{
+	text-align: left !important;
+}
+
 .dropdown {
     float: left;
     overflow: hidden;
@@ -66,6 +70,7 @@
 
 #menu a{
 	z-index: 999;
+	padding: 0 15px;
 }
 
 .dropdown{
@@ -80,7 +85,7 @@
 
 .dropdown li{
 	font-size: 0.75rem !important;
-	/*padding: 15px;*/
+	list-style: none;
 }
 
 .dropdownB:hover ul.dropdown{

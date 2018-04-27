@@ -48,36 +48,18 @@
 	<h3>Проекты</h3>
 
 	<div class="row" id="projects">
+		@foreach( $projects as $project )
 		<div class="col-3">
 			<div class="top">
 				<div class="black"></div>
 			</div>
 			<div class="bot">
-				<h4>Проект «Добро»</h4>
-				<p>Подарок во блага</p>
-				<a href="#">Подробнее</a>
+				<h4>{{ $project->title }}</h4>
+				<!-- <p>Подарок во блага</p> -->
+				<a href="{{ $project->url }}" target="_blank">Подробнее</a>
 			</div>
 		</div>
-		<div class="col-3">
-			<div class="top">
-				<div class="black"></div>
-			</div>
-			<div class="bot">
-				<h4>Проект «Добро»</h4>
-				<p>Подарок во блага</p>
-				<a href="#">Подробнее</a>
-			</div>
-		</div>
-		<div class="col-3">
-			<div class="top">
-				<div class="black"></div>
-			</div>
-			<div class="bot">
-				<h4>Проект «Добро»</h4>
-				<p>Подарок во блага</p>
-				<a href="#">Подробнее</a>
-			</div>
-		</div>	
+		@endforeach	
 	</div>
 
 	<a href="#all-proj">Все проекты</a>
@@ -130,16 +112,18 @@
 
 		<div class="col-4">
 			<div class="row">
+				@foreach( $news as $new )
 				<div class="col-6">
 					<span></span>
-					<span>31.03.2018</span>
+					<span>{{ $new->created_at }}</span>
 					<div class="clear"></div>
 					<div class="newsImg"></div>
-					<h4>Стартует XIII ежегодный Республиканский Фестиваль детского творчества и Спартакиады » Жұлдызай — 2018″</h4>
-					<p>1 апреля  Стартует XIII ежегодный Республиканский Фестиваль детского творчества и Спартакиады «Жұлдызай» ! C 6 по 24 апреля пройдут отборочные туры в 16 городах Казахстана !!! Фестиваль детского творчества Жұлдызай являеется единственным Республиканским фестивалем для...</p>
-					<a href="#read">Читать ></a>
+					<h4>{{ $new->title }}</h4>
+					<p>{!! $new->text !!}</p>
+					<a href="{{ url('news/' . $new->slug)}}">Читать ></a>
 				</div>
-				<div class="col-6">
+				@endforeach
+				<!-- <div class="col-6">
 					<span></span>
 					<span>24.11.2017</span>
 					<div class="clear"></div>
@@ -183,7 +167,7 @@
 					<h4>150 детей-инвалидов в Жанаозене взяты под особый контроль</h4>
 					<p>В результате проекта «Здоровые дети», инициированного фондом «BI-Жұлдызай» при спонсорской поддержке Samruk Kazyna Trust, 150 детей из Жанаозена включены в базу подопечных фонда, а 145 из них прошли полный курс специализированной реабилитации. Дети получили квалифицированные...</p>
 					<a href="#read">Читать ></a>
-				</div>
+				</div> -->
 				<a href="/news" target="_blank">Все новости</a>
 			</div>
 		</div>
