@@ -109,7 +109,7 @@
 		{{--@foreach($menus as $menu)
 		<a href="{{ $menu->alias }}">{{ $menu->title }}</a>
 		@endforeach--}}
-		<a href="/">Главная</a>
+		<a href="/" class="main">Главная</a>
 		<div class="dropdownB">
 			<a href="/our-projects" class="our-projects">Наши проекты
 		</a>
@@ -119,10 +119,10 @@
 				<li><a href="#">Медико-социальный проект</a></li>
 			</ul>
 		</div>
-		<a href="/news">Новости</a>
-		<a href="/mass-media-about-us">СМИ о нас</a>
-		<a href="/galleries">Галерея</a>
-		<a href="/donations">Пожертвования</a>
-		<a href="/contacts">Контакты</a>
+		<a href="/news" class="news">Новости</a>
+		<a href="/mass-media-about-us" class="massMedia">СМИ о нас</a>
+		<a href="/galleries" class="gallery">Галерея</a>
+		<a href="/donations" class="pjr">Пожертвования</a>
+		<a href="/contacts" class="contacts">Контакты</a>
 	</div>
 </div>	

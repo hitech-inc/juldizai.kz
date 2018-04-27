@@ -36,5 +36,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
 	Route::resource('allNews', 'allNewController');
 	Route::resource('galleries', 'GalleryController');
 	Route::resource('massMediaAboutuses', 'massMediaAboutUsController');
+	Route::resource('projects', 'ProjectController');
 	Route::resource('testmenus', 'testmenuController');
 });

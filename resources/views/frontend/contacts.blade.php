@@ -1,6 +1,13 @@
 @extends('frontend.layouts.master')
 
 @section('content')
+<style>
+	@if($currentURL == !null)
+            a.contacts{
+                background-color: #b0e0c8;
+            }
+        @endif
+</style>
 	<div class="container" style="padding: 50px 0">
 		<div class="row">
 			<div class="col-6">

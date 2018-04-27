@@ -22,6 +22,10 @@
     <a href="{!! route('massMediaAboutuses.index') !!}"><i class="fa fa-edit"></i><span>СМИ о нас</span></a>
 </li>
 
+<li class="{{ Request::is('massMediaAboutuses*') ? 'active' : '' }}">
+    <a href="{!! route('projects.index') !!}"><i class="fa fa-edit"></i><span>Наши проекты</span></a>
+</li>
+
 <li class="{{ Request::is('testmenus*') ? 'active' : '' }}">
     <a href="{!! route('testmenus.index') !!}"><i class="fa fa-edit"></i><span>Testmenus</span></a>
 </li>

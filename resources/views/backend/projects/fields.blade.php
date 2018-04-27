@@ -4,6 +4,12 @@
     {!! Form::text('title', null, ['class' => 'form-control']) !!}
 </div>
 
+<!-- Url Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('url', 'Ссылка на сайт проекта:') !!}
+    {!! Form::text('url', null, ['class' => 'form-control']) !!}
+</div>
+
 <!-- Text Field -->
 <div class="form-group col-sm-12 col-lg-12">
     {!! Form::label('text', 'Text:') !!}

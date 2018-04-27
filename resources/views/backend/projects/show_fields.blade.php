@@ -10,6 +10,12 @@
     <p>{!! $project->title !!}</p>
 </div>
 
+<!-- Url Field -->
+<div class="form-group">
+    {!! Form::label('url', 'Url:') !!}
+    <p>{!! $project->url !!}</p>
+</div>
+
 <!-- Text Field -->
 <div class="form-group">
     {!! Form::label('text', 'Text:') !!}

@@ -2,6 +2,7 @@
     <thead>
         <tr>
             <th>Title</th>
+            <th>Url</th>
         <th>Text</th>
         <th>Img</th>
             <th colspan="3">Action</th>
@@ -11,6 +12,7 @@
     @foreach($projects as $project)
         <tr>
             <td>{!! $project->title !!}</td>
+            <td>{!! $project->url !!}</td>
             <td>{!! $project->text !!}</td>
             <td>{!! $project->img !!}</td>
             <td>

@@ -18,27 +18,29 @@ class SiteController extends Controller
 
     public function index()
     {
-
+    	$currentURL = \Request::segment(1);
     	$menus = $this->getMenu();
     	// dd($menus);
-    	return view('frontend.index', compact('menus'));
+    	return view('frontend.index', compact('menus', 'currentURL'));
     }
 
     public function contacts()
     {
+    	$currentURL = \Request::segment(1);
     	$menus = $this->getMenu();
     	$contacts = Contact::get();
-    	return view('frontend.contacts', compact('menus', 'contacts'));
+    	return view('frontend.contacts', compact('menus', 'contacts', 'currentURL'));
     }
 
     public function news(Request $request, $id = "")
     {
     	if (!$id)
     	{
+    		$currentURL = \Request::segment(1);
     		$menus = $this->getMenu();
 	    	$news = allNew::all();
 	    	//dd($news);
-	    	return view('frontend.news', compact('news', 'menus', 'selectedNews'));
+	    	return view('frontend.news', compact('news', 'menus', 'selectedNews', 'currentURL'));
     	}
     	else
     	{
@@ -51,20 +53,22 @@ class SiteController extends Controller
 
     public function massMedia()
     {
+    	$currentURL = \Request::segment(1);
     	$menus = $this->getMenu();
     	$massMedia = massMedia::all();
     	//dd($massMedia);
-    	return view('frontend.mass-media-about-us', compact('menus', 'massMedia'));
+    	return view('frontend.mass-media-about-us', compact('menus', 'massMedia', 'currentURL'));
     }
 
     public function gallery(Request $request, $id = "")
     {
     	if (!$id)
     	{
+    		$currentURL = \Request::segment(1);
     		$menus = $this->getMenu();
 	    	$galleries = Gallery::all();
 	    	//dd($galleries);
-	    	return view('frontend.galleries', compact('menus', 'galleries'));
+	    	return view('frontend.galleries', compact('menus', 'galleries', 'currentURL'));
     	}
     	else
     	{
@@ -77,8 +81,9 @@ class SiteController extends Controller
 
     public function projects()
     {
+    	$currentURL = \Request::segment(1);
     	$projects = Project::all();
-    	return view('frontend.our-projects', compact('projects'));
+    	return view('frontend.our-projects', compact('projects', 'currentURL'));
     }
 
     public function getSubMenu()

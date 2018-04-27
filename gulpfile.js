@@ -8,10 +8,8 @@ var gulp = require('gulp'),
 // SASS
 gulp.task('sass', function () {
   	gulp.src('resources/assets/sass/**/*.scss')
-  	.pipe(plumber())
     .pipe(sass())
-    .pipe(gulp.dest('public/css'))
-    .pipe(livereload());
+    .pipe(gulp.dest('public/css'));
 });
 
 // Scripts Task
@@ -26,8 +24,6 @@ gulp.task('scripts', function () {
 // Watch Task
 // Sass + JS
 gulp.task('watch', function () {
-  var server = livereload();
-	gulp.watch('resources/assets/js/*.js', ['scripts']);
 	gulp.watch('resources/assets/sass/**/*.scss', ['sass']);
 });
 

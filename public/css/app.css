@@ -6206,13 +6206,6 @@ a.text-dark:hover, a.text-dark:focus {
 .text-white-50 {
   color: rgba(255, 255, 255, 0.5) !important; }
 
-.text-hide {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0; }
-
 .visible {
   visibility: visible !important; }
 
@@ -6336,7 +6329,8 @@ header {
     line-height: 1em; }
 
 #menu {
-  height: 73px; }
+  height: 73px;
+  background-color: #dedede; }
   #menu a {
     cursor: pointer;
     display: block;
@@ -6346,14 +6340,8 @@ header {
     text-align: center;
     text-transform: uppercase;
     font-size: 1.4em; }
-    #menu a:nth-child(1) {
-      background-color: #fff; }
-    #menu a:nth-child(2) {
-      background-color: #eef4f4; }
-    #menu a:nth-child(3) {
+    #menu a:hover {
       background-color: #b0e0c8; }
-    #menu a:nth-child(4) {
-      background-color: #f48f8f; }
 
 main .container > h3 {
   text-align: center;

@@ -1,6 +1,16 @@
 @extends('frontend.layouts.master')
-@section('content')
 
+@section('content')
+<style type="text/css">
+        @if($currentURL == null)
+            /*a.nav-link:hover{
+                color: red !important;
+            }*/
+            #menu .main{
+                background-color: #b0e0c8;
+            }
+        @endif
+    </style>
 <div class="container">
 	<div class="row" id="slider">
 		<div class="col-6">
@@ -174,7 +184,7 @@
 					<p>В результате проекта «Здоровые дети», инициированного фондом «BI-Жұлдызай» при спонсорской поддержке Samruk Kazyna Trust, 150 детей из Жанаозена включены в базу подопечных фонда, а 145 из них прошли полный курс специализированной реабилитации. Дети получили квалифицированные...</p>
 					<a href="#read">Читать ></a>
 				</div>
-				<a href="#all-news">Все новости</a>
+				<a href="/news" target="_blank">Все новости</a>
 			</div>
 		</div>
 

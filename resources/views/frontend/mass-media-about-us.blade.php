@@ -1,6 +1,13 @@
 @extends('frontend.layouts.master')
 
 @section('content')
+<style>
+	@if($currentURL == !null)
+            a.massMedia{
+                background-color: #b0e0c8;
+            }
+        @endif
+</style>
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
