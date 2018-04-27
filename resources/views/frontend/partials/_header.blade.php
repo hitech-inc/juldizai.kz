@@ -69,7 +69,7 @@
 }
 
 .dropdown{
-	background-color: #eef4f4;
+	background-color: #dedede;
 	min-width: 200px;
 	position: absolute;
 	top: 73px;
