@@ -1,6 +1,28 @@
 @extends('frontend.layouts.master')
 
 @section('content')
+<script type="text/javascript">
+        ymaps.ready(init);
+
+        var longitude = {{ App\Models\Contact::getCoords()['longitude'] }};
+        var latitude = {{ App\Models\Contact::getCoords()['latitude'] }};
+        var myMap, 
+            myPlacemark;
+
+        function init(){ 
+            myMap = new ymaps.Map("map", {
+                center: [longitude, latitude],
+                zoom: 17
+            }); 
+            
+            myPlacemark = new ymaps.Placemark([longitude, latitude], {
+                hintContent: 'BI Zhuldizai!',
+                balloonContent: 'Благотворительный фонд'
+            });
+            
+            myMap.geoObjects.add(myPlacemark);
+        }
+    </script>
 <style>
 	@if($currentURL == !null)
             a.contacts{
@@ -11,7 +33,8 @@
 	<div class="container" style="padding: 50px 0">
 		<div class="row">
 			<div class="col-6">
-				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A693a952ed65579015c42677ac5ae94a2c61aaf4c7cc3541b3002efc03a152968&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=true"></script>
+				{{--<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A693a952ed65579015c42677ac5ae94a2c61aaf4c7cc3541b3002efc03a152968&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=true"></script>--}}
+				<div id="map" style="width: 100%; height: 600px"></div>
 			</div>
 			<div class="col-6">
 				<h2 style="text-align: center;">Наш офис</h2>

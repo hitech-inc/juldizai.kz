@@ -57,5 +57,20 @@ class Contact extends Model
         'address' => 'required'
     ];
 
-    
+    public static function getCoords()
+    {
+        $maps = Contact::where('longitude', '!=', null)->get();
+        $coords = [];
+        foreach( $maps as $map )
+        {
+            $longitude = $map->longitude;
+            $latitude = $map->latitude;
+            $coords = [
+              'longitude' => $longitude,
+              'latitude' => $latitude
+            ];
+        }
+        //dd($coords);
+        return $coords;
+    }
 }

@@ -15,6 +15,9 @@
 			cursor: pointer !important;
 		}
 	</style>
+	<!-- Yandex map API -->
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+    </script>
 </head>
 <body>
 	<header>
@@ -26,7 +29,7 @@
 	<footer>
 		@include('frontend.partials._footer')
 	</footer>
-
+	
 	<script src="/js/jquery.js"></script>
 	<script src="/js/jquery-ui.min.js"></script>
 	<script src="/js/owl.carousel.min.js"></script>
