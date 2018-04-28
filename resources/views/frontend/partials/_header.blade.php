@@ -107,7 +107,7 @@
 	</div>
 	<div class="row" id="banner">
 		<img src="/img/header/girl.png" alt="banner">
-		<img src="/img/header/logo.png" alt="logo" class="logo">
+		<img src="/img/logo.png" alt="logo" class="logo">
 		<p>Сделай первый шаг вместе с нами</p>
 	</div>
 	<div class="row" id="menu">

@@ -6317,7 +6317,9 @@ header {
     height: 100%; }
   #banner .logo {
     position: absolute;
-    height: 20%;
+    height: 130px;
+    width: 150px;
+    max-width: 100%;
     top: 32%;
     left: 28%; }
   #banner p {
