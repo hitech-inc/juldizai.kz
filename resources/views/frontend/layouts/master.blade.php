@@ -11,6 +11,9 @@
 	<link rel="stylesheet" href="/css/app.css">
 	<link rel="stylesheet" href="/css/fontawesome-all.min.css">
 	<style>
+		body{
+			font-family: ArnoProBoldSubhead_1;
+		}
 		a{
 			cursor: pointer !important;
 		}

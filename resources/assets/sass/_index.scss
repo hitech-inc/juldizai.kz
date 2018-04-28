@@ -80,7 +80,7 @@ main .container {
 					position: absolute;
 					right: 5%;
 					top: 80%;
-				    font-size: 0.8em;
+				    font-size: 1em;
 				    display: block;
 				    height: 40px;
 				    text-align: center;
@@ -176,7 +176,7 @@ main .container {
 			h4 {
 				padding-top: 10px;
 				padding-left: 10px;
-				font-size: 1.4em;
+				font-size: 1.7em;
 				color: #fff;
 				margin-bottom: 0;
 			}
@@ -187,11 +187,11 @@ main .container {
 			}
 			a {
 				display: block;
-				width: 28%;
+				width: 35%;
 				height: 16px;
 				line-height: 16px;
 				text-align: center;
-				font-size: 0.55em;
+				font-size: 1em;
 				background-color: #1e2e3d;
 				@include border-radius(2px);
 				text-transform: uppercase;
@@ -292,7 +292,7 @@ main .container {
 				}
 				h4 {
 					padding-top: 8px;
-					font-size: 0.7em;
+					font-size: 0.85em;
 					margin-bottom: 0;
 				}
 				p {
@@ -312,7 +312,7 @@ main .container {
 				span:nth-child(2) {
 					margin-left: 5px;
 					float: left;
-					font-size: 0.7em; 
+					font-size: 0.85em; 
 					display: block;
 					line-height: 15px;  
 					height: 15px; 
@@ -322,7 +322,7 @@ main .container {
 					bottom: 0;
 					text-align: left;
 					display: block;
-					font-size: 0.6em;
+					font-size: 0.85em;
 				}
 				.clear {
 					clear: both;
@@ -335,15 +335,29 @@ main .container {
 
 .quoteTop,
 .quoteBot {
-	width: 40%;
+	width: 50%;
 	margin: 0 auto;
 	text-align: center;
-	font-size: 0.7em;
+	font-size: 1em;
 	padding-top: 50px;
 }
 .quoteBot {
 	padding-top: 15px;
+	font-size: 1.2em;
 }
+
+.quoteBot a{
+	background-color: #7FFF00;
+	border-radius: 8px;
+	padding: 5px 25px;	
+	color: #fff;
+}
+
+.quoteBot a:hover{
+	background-color: pink;
+	transition: 0.5s;
+}
+
 .afterQUote {
 	text-align: center;
 	margin-top: 15px;
@@ -385,7 +399,7 @@ main .container {
 			width: 70%;
 			margin: 0 auto;
 			line-height: 1em;
-    		font-size: 0.8em;
+    		font-size: 1em;
 		}
 	}
 	p.firstText {
@@ -393,7 +407,7 @@ main .container {
 		width: 70%;
 		line-height: 1.8em;
 		margin: 0 auto;
-		font-size: 0.7em;
+		font-size: 1em;
 		margin-bottom: 30px;
 	}
 	.secondText {
@@ -409,7 +423,7 @@ main .container {
 		}
 		p {
 			line-height: 1.8em;
-			font-size: 0.7em;
+			font-size: 1em;
 		}
 	}
 	.thirdText {
@@ -417,7 +431,7 @@ main .container {
 		width: 70%;
 		line-height: 1.8em;
 		margin: 0 auto;
-		font-size: 0.7em;
+		font-size: 1em;
 	}
 	a {
 		display: block;
