@@ -25,10 +25,10 @@
     </script>
 <style>
 	@if($currentURL == !null)
-            a.contacts{
-                background-color: #b0e0c8;
-            }
-        @endif
+  a.contacts{
+  	background-color: #b0e0c8;
+  }
+  @endif
 </style>
 	<div class="container" style="padding: 50px 0">
 		<div class="row">
