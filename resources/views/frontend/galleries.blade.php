@@ -6,8 +6,11 @@
             a.gallery{
                 background-color: #b0e0c8;
             }
+
         @endif
-	       
+	                   img {
+            	border-radius: 0px !important; 
+            }
 </style>
 	<div class="container">
 		<div class="row">

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App;
 use App\Models\Menu;
 use App\Models\Contact;
 use App\Models\Reqisite;
@@ -25,7 +25,8 @@ class SiteController extends Controller
             } else {
                 $lang = 'ru';
             }
-            
+
+            App::setLocale($lang);
 
     		$currentURL = \Request::segment(1);
 	    	$menus = $this->getMenu();
@@ -36,6 +37,8 @@ class SiteController extends Controller
     	}
     	else
     	{
+            App::setLocale($lang);
+            
     		$menus = $this->getMenu();
     		$selectedNews = allNew::where('slug', $id)->first();
     		//dd($selectedNews);
@@ -46,6 +49,7 @@ class SiteController extends Controller
     public function contacts()
     {
         $lang = session('lang');
+        App::setLocale($lang);
 
     	$currentURL = \Request::segment(1);
     	$menus = $this->getMenu();
@@ -55,10 +59,11 @@ class SiteController extends Controller
 
     public function news(Request $request, $id = "")
     {
+        $lang = session('lang');
+        App::setLocale($lang);
+
     	if (!$id)
     	{
-            $lang = session('lang');
-
     		$currentURL = \Request::segment(1);
     		$menus = $this->getMenu();
 	    	$news = allNew::where('lang',$lang)->get();
@@ -77,6 +82,7 @@ class SiteController extends Controller
     public function massMedia()
     {
         $lang = session('lang');
+        App::setLocale($lang);
 
     	$currentURL = \Request::segment(1);
     	$menus = $this->getMenu();
@@ -87,10 +93,11 @@ class SiteController extends Controller
 
     public function gallery(Request $request, $id = "")
     {
+        $lang = session('lang');
+        App::setLocale($lang);
+
     	if (!$id)
     	{
-            $lang = session('lang');
-
     		$currentURL = \Request::segment(1);
     		$menus = $this->getMenu();
 	    	$galleries = Gallery::where('lang',$lang)->get();
@@ -109,6 +116,7 @@ class SiteController extends Controller
     public function projects()
     {
         $lang = session('lang');
+        App::setLocale($lang);
 
     	$currentURL = \Request::segment(1);
     	$projects = Project::where('lang',$lang)->get();
@@ -138,6 +146,7 @@ class SiteController extends Controller
 
     public function setLang($language)
     {
+        App::setLocale($language);
         session(['lang' => $language]);
         $lang = session('lang');
         return self::index();

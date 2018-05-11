@@ -10,13 +10,19 @@
                 background-color: #b0e0c8;
             }
         @endif
-    </style>
+#projects .col-3 .bot h4 {
+	font-size: 1.5rem;
+}
+#projects .col-3 .bot a {
+	font-size: 0.8em;
+}
+</style>
 <div class="container">
 	<div class="row" id="slider">
 		<div class="col-6">
 			<div class="black">
-				<p>ЭТО ЛУЧШЕЕ ЧТО ВЫ  МОЖЕТЕ сделать В ЭТОМ МИРЕ</p>
-				<a href="#">Сделать пожертвование</a>
+				<p> @lang('a.leftbanner')</p>
+				<a href="#">@lang('a.donate')</a>
 			</div>
 		</div>
 		<div class="col-6">
@@ -45,7 +51,7 @@
 			<div id="scroll-bar"  class="ui-widget-content"></div>
 		</div>
 	</div>
-	<h3>Проекты</h3>
+	<h3>@lang('a.projects')</h3>
 
 	<div class="row" id="projects">
 		@foreach( $projects as $project )
@@ -56,20 +62,20 @@
 			<div class="bot">
 				<h4>{{ $project->title }}</h4>
 				<!-- <p>Подарок во блага</p> -->
-				<a href="{{ $project->url }}" target="_blank">Подробнее</a>
+				<a href="{{ $project->url }}" target="_blank">@lang('a.more')</a>
 			</div>
 		</div>
 		@endforeach	
 	</div>
 
-	<a href="#all-proj" style="font-size: 1.7rem">Все проекты</a>
+	<a href="#all-proj" style="font-size: 1.7rem">@lang('a.allprojects')</a>
 	
 	<div class="row" id="youtubeAndNews">
 		<div>
-			<h3>Youtube online</h3>
-			<p>Мы в прямом эфире</p>
+			<h3>@lang('a.youtube')</h3>
+			<p>@lang('a.online')</p>
 		</div>
-		<a href="#news">Новости</a>
+		<a href="#news">@lang('a.news')</a>
 	</div>
 
 	<div class="row" id="mainBlock">
@@ -77,7 +83,7 @@
 			<iframe src="https://www.youtube.com/embed/d2hRTLdvdnk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 			<div class="galleryText">
 				<h3>Фотогалерея</h3>
-				<p>Фотоархив всех событий</p>
+				<p>@lang('a.archive')</p>
 			</div>
 			<div class="gallery">
 				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -120,22 +126,22 @@
 					<div class="newsImg"></div>
 					<h4>{{ $new->title }}</h4>
 					<p>{!! $new->text !!}</p>
-					<a href="{{ url('news/' . $new->slug)}}">Читать ></a>
+					<a href="{{ url('news/' . $new->slug)}}">@lang('a.read') ></a>
 				</div>
 				@endforeach
-				<a href="/news" target="_blank" style="font-size: 1.4rem">Все новости</a>
+				<a href="/news" target="_blank" style="font-size: 1.4rem">@lang('a.allnews')</a>
 			</div>
 		</div>
 
 	</div>
 	
 	<p class="quoteTop">
-		Мечтаете совершить подвиг? Спасти человечество? А ведь каждый из нас может стать героем, и спасти человеческую жизнь. Для этого необязательно надевать костюм супермена и выполнять опасные трюки. Для того чтобы стать героем, нужно всего лишь быть Человеком. Человеком, сочувствующим чужому горю, и, способным подать руку помощи маленькому ребенку, чья жизнь может оборваться в любой момент.
+		@lang('a.dream')
 	</p>
 	<p class="quoteBot">
-		<a href="">Сделать пожертвование</a>
+		<a href="">@lang('a.donate')</a>
 	</p>
-	<h3 class="afterQUote">О фонде</h3>
+	<h3 class="afterQUote">@lang('a.fond')</h3>
 
 	<div class="row" id="article">
 		<div class="articleImg">
@@ -153,7 +159,7 @@
 		<p class="thirdText">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
 		<!-- <a href="#all-stories">Все истории</a> -->
 	</div>
-	<h3>Партнеры фонда</h3>
+	<h3>@lang('a.partners')</h3>
 	<div id="partners">
 		<div class="owl-carousel owl-theme partners">
 		    <div class="item"><h4>1</h4></div>

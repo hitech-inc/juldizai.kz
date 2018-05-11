@@ -17,7 +17,7 @@
             
             myPlacemark = new ymaps.Placemark([longitude, latitude], {
                 hintContent: 'BI Zhuldizai!',
-                balloonContent: 'Благотворительный фонд'
+                balloonContent: '@lang("a.df")'
             });
             
             myMap.geoObjects.add(myPlacemark);
@@ -37,25 +37,25 @@
 				<div id="map" style="width: 100%; height: 600px"></div>
 			</div>
 			<div class="col-6">
-				<h2 style="text-align: center;">Наш офис</h2>
+				<h2 style="text-align: center;">@lang('a.office')</h2>
 				@foreach($contacts as $contact)
 					@if($loop->index == 1)
 					<p><i class="fas fa-phone-square"></i>&nbsp;{{ $contact->tel }}</p>
 					<p><i class="fas fa-envelope"></i>&nbsp;{{ $contact->email }}</p>
 					<p><i class="fas fa-home"></i>&nbsp;{{ $contact->address }}</p>
-					<h4 style="text-align: center;">Остались вопросы?</h4>
+					<h4 style="text-align: center;">@lang('a.questions')</h4>
 					<form action="" style="padding-right: 15px;">
 						<div class="form-group">
-							<input type="text" name="name" class="form-control" placeholder="Ваше имя">
+							<input type="text" name="name" class="form-control" placeholder="@lang('a.name')">
 						</div>
 						<div class="form-group">
-							<input type="email" name="email" class="form-control" placeholder="Ваш email">
+							<input type="email" name="email" class="form-control" placeholder="@lang('a.email')">
 						</div>
 						<div class="form-group">
-							<textarea name="text" class="form-control" id="" cols="30" rows="9" placeholder="Ваш сообщение"></textarea>
+							<textarea name="text" class="form-control" id="" cols="30" rows="9" placeholder="@lang('a.message')"></textarea>
 						</div>
 						<div class="form-group">
-							<input type="submit" class="btn btn-primary">
+							<input type="submit" class="btn btn-primary" value="@lang('a.send')">
 						</div>
 					</form>
 					@endif

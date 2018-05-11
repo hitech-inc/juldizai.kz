@@ -1,0 +1,85 @@
+/* @font-face {
+  font-family: DinProCondBold;
+  src: url(../fonts/DINPro-CondBold.otf); }
+
+@font-face {
+  font-family: DinProCond;
+  src: url(../fonts/DINPro-Cond.otf); }
+
+@font-face {
+  font-family: DINProCondLight;
+  src: url(../fonts/DINPro-CondLight.otf); }
+
+@font-face {
+  font-family: DINProCondMedium;
+  src: url(../fonts/DINPro-CondMedium.otf); }
+ */
+
+
+ * {
+ 	font-family: DinProCond;
+}
+
+header *{
+ 	font-family: DinProCondBold;
+}
+
+.lang * {
+ 	font-family: DinProCond;
+}
+
+#slider a,
+.container h3,
+#youtubeAndNews a,
+#mainBlock .col-4 .row .col-6 a,
+.quoteBot a,
+#footerBot a,
+#footerTop > div .col-6:nth-child(2),
+#projects .col-3 .bot a
+{
+ 	font-family: DinProCondBold;
+}
+
+#footerTop > div .col-6:nth-child(1) {
+	text-transform: uppercase;
+	font-family: DinProCondBold;
+}
+
+#article .firstText,
+#article .secondText,
+#article .thirdText  {
+	line-height: 1.5em;
+}
+
+#article .firstText {
+	margin-bottom: 15px;
+}
+
+#article .thirdText {
+	padding-top: 20px;
+	margin-bottom: 30px;
+}
+
+
+
+
+/********************************** ANOTHER STYLES ***********************/
+/************************** IT SHOULD BE TRANSLATE TO SASS FILE ******************/
+/****************************SORRY *********************/
+
+.newsBlock .col-8 {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.newsBlock .col-8 a {
+	width: 15%;
+	font-family: DinProCondBold;
+	text-transform: uppercase;
+	
+}

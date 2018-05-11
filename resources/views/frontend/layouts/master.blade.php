@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="/css/owl.theme.default.min.css">
 	<link rel="stylesheet" href="/css/app.css">
 	<link rel="stylesheet" href="/css/fontawesome-all.min.css">
+	<link rel="stylesheet" href="/css/font.css">
 	<style>
 		body{
 			font-family: ArnoProBoldSubhead_1;

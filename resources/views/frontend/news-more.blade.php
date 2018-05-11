@@ -8,7 +8,7 @@
 					<img src="/img/news/{{$selectedNews->img}}" alt="" style="max-width: 100%; border-radius: 15px;">
 					<h3 style="margin-top: 15px;">{{ $selectedNews->title }}</h3>
 					<p>{!! $selectedNews->text !!}</p>
-					<a href="../news" class="btn btn-primary">Назад</a>
+					<a href="../news" class="btn btn-primary">@lang('a.back')</a>
 				</div>
 			</div>
 		</div>
