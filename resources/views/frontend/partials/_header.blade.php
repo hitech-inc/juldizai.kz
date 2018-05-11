@@ -147,23 +147,20 @@
 		</div>
 	</div>
 	<div class="row" id="menu">
-		{{--@foreach($menus as $menu)
-		<a href="{{ $menu->alias }}">{{ $menu->title }}</a>
-		@endforeach--}}
-		<a href="/" class="main">Главная</a>
+		<a href="/" class="main">@lang('a.main')</a>
 		<div class="dropdownB">
-			<a href="/our-projects" class="our-projects">Наши проекты
+			<a href="/our-projects" class="our-projects">@lang('a.ourproj')
 		</a>
 		<ul class="dropdown">
-				<li><a href="http://fest.juldizai.kz/" target="_blank">Фестиваль Жулдызай</a></li>
+				<li><a href="http://fest.juldizai.kz/" target="_blank">@lang('a.fest')</a></li>
 				<li><a href="http://sport.juldizai.kz/" target="_blank">Спартакиада</a></li>
-				<li><a href="#">Медико-социальный проект</a></li>
+				<li><a href="#">@lang('a.med')</a></li>
 			</ul>
 		</div>
-		<a href="/news" class="news">Новости</a>
-		<a href="/mass-media-about-us" class="massMedia">СМИ о нас</a>
+		<a href="/news" class="news">@lang('a.news')</a>
+		<a href="/mass-media-about-us" class="massMedia">@lang('a.smi')</a>
 		<a href="/galleries" class="gallery">Галерея</a>
-		<a href="/donations" class="pjr">Пожертвования</a>
-		<a href="/contacts" class="contacts">Контакты</a>
+		<a href="/donations" class="pjr">@lang('a.don')</a>
+		<a href="/contacts" class="contacts">@lang('a.contacts')</a>
 	</div>
 </div>	

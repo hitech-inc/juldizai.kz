@@ -26,7 +26,8 @@ class Menu extends Model
     public $fillable = [
         'title',
         'alias',
-        'lang'
+        'lang',
+        'parentId'
     ];
 
     /**
@@ -38,6 +39,7 @@ class Menu extends Model
         'title' => 'string',
         'alias' => 'string',
         'lang' => 'string',
+        'parentId' => 'string'
     ];
 
     /**
@@ -48,7 +50,7 @@ class Menu extends Model
     public static $rules = [
         'title' => 'required',
         'alias' => 'required',
-        'lang' => 'required',
+        'lang' => 'required'
     ];
 
     public function getMenu()
