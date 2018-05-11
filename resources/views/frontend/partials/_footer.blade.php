@@ -35,24 +35,24 @@
 			<h4 style="text-align: center; padding-top: 15px;">{{$requisite->title}}</h4>
 			<ul style="list-style: none; margin: 0 25px; width: 25%" class="requisites">
 				<li><a href="#">Оплата через:{{ $requisite->payment_via }}</a></li>
-				<li><a href="">WebMoney: {{ $requisite->payment_via }}</a></li>
-				<li><a href="">QIWI WALLET: {{ $requisite->qiwi_wallet }}</a></li>
+				<li><a href="#">WebMoney: {{ $requisite->payment_via }}</a></li>
+				<li><a href="#">QIWI WALLET: {{ $requisite->qiwi_wallet }}</a></li>
 			</ul>
 			<ul style="list-style: none; margin: 0 25px; width: 25%" class="requisites">
-				<li><a href="">ЯНДЕКС ДЕНЬГИ: {{ $requisite->yandex_money }}</a></li>
-				<li><a href="">РНН: {{ $requisite->rnn }}</a></li>
-				<li><a href="">Р/с: {{ $requisite->checking_account }}</a></li>
+				<li><a href="#">ЯНДЕКС ДЕНЬГИ: {{ $requisite->yandex_money }}</a></li>
+				<li><a href="#">РНН: {{ $requisite->rnn }}</a></li>
+				<li><a href="#">Р/с: {{ $requisite->checking_account }}</a></li>
 			</ul>
 			<ul style="list-style: none; margin: 0 25px; width: 25%" class="requisites">
-				<li><a href="">Банк: {{ $requisite->bank }}</a></li>
-				<li><a href="">МФО: {{ $requisite->mfo }}</a></li>
-				<li><a href="">БИН: {{ $requisite->bin }}</a></li>
+				<li><a href="#">Банк: {{ $requisite->bank }}</a></li>
+				<li><a href="#">МФО: {{ $requisite->mfo }}</a></li>
+				<li><a href="#">БИН: {{ $requisite->bin }}</a></li>
 			</ul>
 		@endforeach
 		</div>
 	</div>
 	<div id="footerBot">
-		<a href="/">Гавная</a>
+		<a href="/">Главная</a>
 		<a href="/our-projects">Наши проекты</a>
 		<a href="/news">Новости</a>
 		<a href="/mass-media-about-us">СМИ о нас</a>

@@ -24,7 +24,8 @@ class ContactRepository extends BaseRepository
         'mobile',
         'address',
         'longitude',
-        'latitude'
+        'latitude',
+        'lang'
     ];
 
     /**

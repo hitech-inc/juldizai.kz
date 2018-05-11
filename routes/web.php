@@ -16,7 +16,8 @@
 // });
 
 // Frontend
-Route::get('/', 'SiteController@index');
+Route::get('/', 'SiteController@index')->name('indexpage');
+Route::get('/lang/{lang}', 'SiteController@setLang');
 Route::get('/news/{id?}', 'SiteController@news');
 Route::get('/contacts', 'SiteController@contacts');
 Route::get('/mass-media-about-us', 'SiteController@massMedia');

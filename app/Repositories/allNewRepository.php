@@ -23,7 +23,8 @@ class allNewRepository extends BaseRepository
         'title',
         'slug',
         'text',
-        'img'
+        'img',
+        'lang'
     ];
 
     /**

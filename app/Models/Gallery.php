@@ -28,7 +28,8 @@ class Gallery extends Model
         'title',
         'img',
         'slug',
-        'photos'
+        'photos',
+        'lang'
     ];
 
     /**
@@ -39,7 +40,8 @@ class Gallery extends Model
     protected $casts = [
         'title' => 'string',
         'img' => 'string',
-        'slug' => 'string'
+        'slug' => 'string',
+        'lang' => 'string'
     ];
 
     /**
@@ -49,7 +51,8 @@ class Gallery extends Model
      */
     public static $rules = [
         'title' => 'required',
-        'img' => 'required'
+        'img' => 'required',
+        'lang' => 'required'
     ];
 
     

@@ -29,7 +29,8 @@ class RequisiteRepository extends BaseRepository
         'checking',
         'bank',
         'mfo',
-        'bin'
+        'bin',
+        'lang'
     ];
 
     /**

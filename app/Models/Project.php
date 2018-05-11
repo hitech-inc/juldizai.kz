@@ -28,7 +28,8 @@ class Project extends Model
         'title',
         'url',
         'text',
-        'img'
+        'img',
+        'lang'
     ];
 
     /**
@@ -39,7 +40,8 @@ class Project extends Model
     protected $casts = [
         'title' => 'string',
         'text' => 'string',
-        'img' => 'string'
+        'img' => 'string',
+        'lang' => 'string'
     ];
 
     /**
@@ -49,7 +51,8 @@ class Project extends Model
      */
     public static $rules = [
         'title' => 'required',
-        'text' => 'required'
+        'text' => 'required',
+        'lang' => 'required'
     ];
 
     

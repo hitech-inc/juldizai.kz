@@ -27,7 +27,8 @@ class massMediaAboutUs extends Model
     public $fillable = [
         'title',
         'img',
-        'link'
+        'link',
+        'lang'
     ];
 
     /**
@@ -38,7 +39,8 @@ class massMediaAboutUs extends Model
     protected $casts = [
         'title' => 'string',
         'img' => 'string',
-        'link' => 'string'
+        'link' => 'string',
+        'lang' => 'string'
     ];
 
     /**
@@ -47,7 +49,8 @@ class massMediaAboutUs extends Model
      * @var array
      */
     public static $rules = [
-        'link' => 'required'
+        'link' => 'required',
+        'lang' => 'required'
     ];
 
     

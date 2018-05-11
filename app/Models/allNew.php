@@ -29,7 +29,8 @@ class allNew extends Model
         'title',
         'slug',
         'text',
-        'img'
+        'img',
+        'lang'
     ];
 
     /**
@@ -41,7 +42,8 @@ class allNew extends Model
         'title' => 'string',
         'slug' => 'string',
         'text' => 'string',
-        'img' => 'string'
+        'img' => 'string',
+        'lang' => 'string'
     ];
 
     /**
@@ -53,7 +55,8 @@ class allNew extends Model
         'title' => 'required',
         'slug' => 'required',
         'text' => 'required',
-        'img' => 'required'
+        'img' => 'required',
+        'lang' => 'required'
     ];
 
     

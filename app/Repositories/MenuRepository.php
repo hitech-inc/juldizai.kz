@@ -21,7 +21,8 @@ class MenuRepository extends BaseRepository
      */
     protected $fieldSearchable = [
         'title',
-        'alias'
+        'alias',
+        'lang'
     ];
 
     /**

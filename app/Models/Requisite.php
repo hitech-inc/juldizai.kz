@@ -41,7 +41,8 @@ class Requisite extends Model
         'checking_account',
         'bank',
         'mfo',
-        'bin'
+        'bin',
+        'lang'
     ];
 
     /**
@@ -58,7 +59,8 @@ class Requisite extends Model
         'rnn' => 'string',
         'bank' => 'string',
         'mfo' => 'string',
-        'bin' => 'string'
+        'bin' => 'string',
+        'lang' => 'string'
     ];
 
     /**
@@ -67,12 +69,13 @@ class Requisite extends Model
      * @var array
      */
     public static $rules = [
-        
+        'lang' => 'required'
     ];
 
    public static function getRequisites()
     {
-        $requisites = self::all();
+        $lang = session('lang');
+        $requisites = self::where('lang',$lang)->get();
         return $requisites;
     }
 }

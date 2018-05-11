@@ -22,7 +22,8 @@ class massMediaAboutUsRepository extends BaseRepository
     protected $fieldSearchable = [
         'title',
         'img',
-        'link'
+        'link',
+        'lang'
     ];
 
     /**

@@ -16,14 +16,21 @@ use App\Models\testmenu;
 class SiteController extends Controller
 {
 
-    public function index(Request $request, $id = "")
+    public function index($id = "")
     {
     	if (!$id)
     	{
+            if(session('lang')){
+                $lang = session('lang');
+            } else {
+                $lang = 'ru';
+            }
+            
+
     		$currentURL = \Request::segment(1);
 	    	$menus = $this->getMenu();
-	    	$projects = Project::take(4)->get();
-	    	$news =allNew::take(6)->get();
+	    	$projects = Project::where('lang',$lang)->get();
+	    	$news =allNew::where('lang',$lang)->take(6)->get();
 	    	// $selectedNews = allNew::where('slug', $id)->first();
 	    	return view('frontend.index', compact('menus', 'currentURL', 'projects', 'news'));
     	}
@@ -38,9 +45,11 @@ class SiteController extends Controller
 
     public function contacts()
     {
+        $lang = session('lang');
+
     	$currentURL = \Request::segment(1);
     	$menus = $this->getMenu();
-    	$contacts = Contact::get();
+    	$contacts = Contact::where('lang',$lang)->get();
     	return view('frontend.contacts', compact('menus', 'contacts', 'currentURL'));
     }
 
@@ -48,9 +57,11 @@ class SiteController extends Controller
     {
     	if (!$id)
     	{
+            $lang = session('lang');
+
     		$currentURL = \Request::segment(1);
     		$menus = $this->getMenu();
-	    	$news = allNew::all();
+	    	$news = allNew::where('lang',$lang)->get();
 	    	//dd($news);
 	    	return view('frontend.news', compact('news', 'menus', 'selectedNews', 'currentURL'));
     	}
@@ -65,9 +76,11 @@ class SiteController extends Controller
 
     public function massMedia()
     {
+        $lang = session('lang');
+
     	$currentURL = \Request::segment(1);
     	$menus = $this->getMenu();
-    	$massMedia = massMedia::all();
+    	$massMedia = massMedia::where('lang',$lang)->get();
     	//dd($massMedia);
     	return view('frontend.mass-media-about-us', compact('menus', 'massMedia', 'currentURL'));
     }
@@ -76,9 +89,11 @@ class SiteController extends Controller
     {
     	if (!$id)
     	{
+            $lang = session('lang');
+
     		$currentURL = \Request::segment(1);
     		$menus = $this->getMenu();
-	    	$galleries = Gallery::all();
+	    	$galleries = Gallery::where('lang',$lang)->get();
 	    	//dd($galleries);
 	    	return view('frontend.galleries', compact('menus', 'galleries', 'currentURL'));
     	}
@@ -93,8 +108,10 @@ class SiteController extends Controller
 
     public function projects()
     {
+        $lang = session('lang');
+
     	$currentURL = \Request::segment(1);
-    	$projects = Project::all();
+    	$projects = Project::where('lang',$lang)->get();
     	return view('frontend.our-projects', compact('projects', 'currentURL'));
     }
 
@@ -105,7 +122,9 @@ class SiteController extends Controller
 
     public function getMenu()
     {
-    	$menus = Menu::all();
+        $lang = session('lang');
+        
+    	$menus = Menu::where('lang',$lang)->get();
     	// $menus = testmenu::where('parent_id', null)->get();
     	// Menu::make('MyNavBar', function($menu){
     	// 	$menu->add($menus);
@@ -115,6 +134,13 @@ class SiteController extends Controller
     	// });
 
     	return $menus;
+    }
+
+    public function setLang($language)
+    {
+        session(['lang' => $language]);
+        $lang = session('lang');
+        return self::index();
     }
 
 }

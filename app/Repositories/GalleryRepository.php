@@ -22,7 +22,8 @@ class GalleryRepository extends BaseRepository
     protected $fieldSearchable = [
         'title',
         'img',
-        'slug'
+        'slug',
+        'lang'
     ];
 
     /**

@@ -32,7 +32,8 @@ class Contact extends Model
         'address',
         'longitude',
         'latitude',
-        'email'
+        'email',
+        'lang'
     ];
 
     /**
@@ -45,7 +46,8 @@ class Contact extends Model
         'mobile' => 'string',
         'address' => 'string',
         'longitude' => 'string',
-        'latitude' => 'string'
+        'latitude' => 'string',
+        'lang' => 'string'
     ];
 
     /**
@@ -54,7 +56,8 @@ class Contact extends Model
      * @var array
      */
     public static $rules = [
-        'address' => 'required'
+        'address' => 'required',
+        'lang' => 'required'
     ];
 
     public static function getCoords()

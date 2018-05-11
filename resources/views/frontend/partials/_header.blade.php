@@ -92,6 +92,32 @@
 	display: block !important;
 	z-index: 999;
 }
+
+.lang {
+	right: 0;
+	top: 0;
+	position: absolute;
+	width: 5%;
+	height: 30px;
+	background-color: #efefef;
+}
+
+.lang a {
+	display: block;
+	width: 50%;
+	color: #636363;
+	height: 100%;
+	line-height: 30px;
+	float: left;
+	font-size: 1.5em;
+	text-align: center;
+}
+
+.lang a:hover {
+	background-color: #b0e0c8;
+}
+
+
 </style>
 <div class="container">
 	<div class="row" id="socialLinks">
@@ -109,6 +135,10 @@
 		<img src="/img/header/girl.png" alt="banner">
 		<a href="/" title="Перейти на главную" style="cursor: pointer;"><img src="/img/logo.png" alt="logo" class="logo"></a>
 		<p>Сделай первый шаг вместе с нами</p>
+		<div class="lang">
+			<a href="/lang/kz">KZ</a>
+			<a href="/lang/ru">RU</a>
+		</div>
 	</div>
 	<div class="row" id="menu">
 		{{--@foreach($menus as $menu)

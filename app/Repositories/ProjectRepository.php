@@ -22,7 +22,8 @@ class ProjectRepository extends BaseRepository
     protected $fieldSearchable = [
         'title',
         'text',
-        'img'
+        'img',
+        'lang'
     ];
 
     /**
