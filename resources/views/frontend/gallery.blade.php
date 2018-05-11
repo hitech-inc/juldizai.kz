@@ -2,10 +2,7 @@
 
 @section('content')
 	<style>
-		img{
-			max-width: 100%;
-			border-radius: 15px;
-		}
+
 		p{
 			float: left;
 			width: 33%;

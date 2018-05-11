@@ -8,7 +8,7 @@
             }
 
         @endif
-	                   img {
+	        img {
             	border-radius: 0px !important; 
             }
 </style>
