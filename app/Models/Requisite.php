@@ -74,7 +74,12 @@ class Requisite extends Model
 
    public static function getRequisites()
     {
-        $lang = session('lang');
+        if(session('lang')){
+            $lang = session('lang');
+        } else {
+            $lang = 'ru';
+        }
+        
         $requisites = self::where('lang',$lang)->get();
         return $requisites;
     }
