@@ -204,25 +204,24 @@ ul.dropdown li a.ourP{
 			<a href="/lang/kz">KZ</a>
 			<a href="/lang/ru">RU</a>
 		</div>
-
-		<div class="banner-slider">
-			<div class="slides" id="banner">
-				<div class="leftBlock">
-					<div class="rBlock">
-						<a href="/galleries" title="Перейти в галерею" class=""><img src="/img/header/girl.png" alt="banner"></a>
-						<a href="/" title="Перейти на главную" style="cursor: pointer;" class="logoL"><img src="/img/logo2.png" alt="logo" class="logo" style="width: 200px;"></a>
+			<div class="banner-slider">
+				<div class="slides" id="banner">
+					<div class="leftBlock">
+						<div class="rBlock">
+							<a href="/galleries" title="Перейти в галерею" class=""><img src="/img/header/girl.png" alt="banner"></a>
+							<a href="/" title="Перейти на главную" style="cursor: pointer;" class="logoL"><img src="/img/logo2.png" alt="logo" class="logo" style="width: 200px;"></a>
+						</div>
+					</div>
+					<div class="rightBlock">
+						<div class="lBlock">
+							<a href="/galleries" class="bannerTitle" title="Перейти в галерею">@lang('a.header')</a>
+						</div>
 					</div>
 				</div>
-				<div class="rightBlock">
-					<div class="lBlock">
-						<a href="/galleries" class="bannerTitle" title="Перейти в галерею">@lang('a.header')</a>
-					</div>
-				</div>
+				<div class="slides"><a href="/galleries" title="Перейти в галерею"><img src="/img/slider/slide1.jpg" alt=""></div></a>
+				<div class="slides"><a href="/galleries" title="Перейти в галерею"><img src="/img/slider/slide2.jpg" alt=""></div></a>
+				<div class="slides"><a href="/galleries" title="Перейти в галерею"><img src="/img/slider/slide3.jpg" alt=""></div></a>
 			</div>
-			<div class="slides"><img src="/img/slider/slide1.jpg" alt=""></div>
-			<div class="slides"><img src="/img/slider/slide2.jpg" alt=""></div>
-			<div class="slides"><img src="/img/slider/slide3.jpg" alt=""></div>
-		</div>
 	</div>
 	<!-- <div class="row" id="banner">
 			<div class="slides"><a href="/galleries" title="Перейти в галерею"><img src="/img/header/girl.png" alt="banner"></a>
