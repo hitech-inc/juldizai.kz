@@ -152,4 +152,10 @@ class SiteController extends Controller
         return self::index();
     }
 
+    public function helpIsNeeded()
+    {
+        $currentURL = \Request::segment(1);
+        return view('frontend.help-is-needed', compact('currentURL'));
+    }
+
 }

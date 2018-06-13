@@ -64,31 +64,71 @@
     display: block;
 }
 
+.dropdownNew:hover .dropdown-content {
+    display: block;
+}
+
+.dropdownHelp:hover .dropdown-content {
+    display: block;
+}
+
 #menu{
 	position: relative;
+	display: flex;
+    justify-content: center;
 }
 
 #menu a{
 	z-index: 999;
-	padding: 0 15px;
+	padding: 0 50px;
 }
 
 .dropdown{
 	background-color: #dedede;
 	min-width: 200px;
 	position: absolute;
-	top: 73px;
-	left: 155px;
+	top: 0;
+	left: 0;
 	display: none;
 	transition: .5s;
 }
 
-.dropdown li{
+.dropdownNew{
+	background-color: #dedede;
+	min-width: 200px;
+	position: absolute;
+	top: 73px;
+	left: 0;
+	display: none;
+	transition: .5s;
+}
+
+.dropdownHelp{
+	background-color: #dedede;
+	min-width: 200px;
+	position: absolute;
+	top: 73px;
+	left: 0;
+	display: none;
+	transition: .5s;
+}
+
+.dropdown li, .dropdownNew li, .dropdownHelp li{
 	font-size: 0.75rem !important;
 	list-style: none;
 }
 
 .dropdownB:hover ul.dropdown{
+	display: block !important;
+	z-index: 999;
+}
+
+.dropdownN:hover ul.dropdownNew{
+	display: block !important;
+	z-index: 999;
+}
+
+.dropdownH:hover ul.dropdownHelp{
 	display: block !important;
 	z-index: 999;
 }
@@ -117,12 +157,34 @@
 	background-color: #b0e0c8;
 }
 
-.dropdown li {
+.dropdown li, .dropdownNew li, .dropdownHelp li {
 	height: 35px;
 }
 
-#menu .dropdown li a {
+#menu .dropdown li a, #menu .dropdownNew li a, #menu .dropdownHelp li a {
 	line-height: 35px;
+	text-align: left !important;
+}
+
+.bannerTitle{
+	font-size: 2.5em;
+    position: absolute;
+    top: 35%;
+    width: 30%;
+    left: 53%;
+    line-height: 1em;
+}
+
+.dropdownNew li a.massMedia{
+	text-align: left;
+}
+
+.dropdownH, .dropdownN, .dropdown{
+	position: relative;
+}
+
+ul.dropdown li a.ourP{
+	padding: 0 20px !important;
 }
 </style>
 <div class="container">
@@ -138,9 +200,9 @@
 		</div>
 	</div>
 	<div class="row" id="banner">
-		<img src="/img/header/girl.png" alt="banner">
-		<a href="/" title="Перейти на главную" style="cursor: pointer;"><img src="/img/logo.png" alt="logo" class="logo"></a>
-		<p>@lang('a.header')</p>
+		<a href="/galleries" title="Перейти в галерею"><img src="/img/header/girl.png" alt="banner"></a>
+		<a href="/" title="Перейти на главную" style="cursor: pointer;"><img src="/img/logo2.png" alt="logo" class="logo"></a>
+		<a href="/galleries" class="bannerTitle" title="Перейти в галерею">@lang('a.header')</a>
 		<div class="lang">
 			<a href="/lang/kz">KZ</a>
 			<a href="/lang/ru">RU</a>
@@ -150,17 +212,28 @@
 		<a href="/" class="main">@lang('a.main')</a>
 		<div class="dropdownB">
 			<a href="/our-projects" class="our-projects">@lang('a.ourproj')
-		</a>
-		<ul class="dropdown">
-				<li><a href="http://fest.juldizai.kz/" target="_blank">@lang('a.fest')</a></li>
-				<li><a href="http://sport.juldizai.kz/" target="_blank">Спартакиада</a></li>
-				<li><a href="#">@lang('a.med')</a></li>
+			</a>
+			<ul class="dropdown">
+				<li><a href="http://fest.juldizai.kz/" target="_blank" class="ourP">@lang('a.fest')</a></li>
+				<li><a href="http://sport.juldizai.kz/" target="_blank" class="ourP">Спартакиада</a></li>
+				<li><a href="http://centr.juldizay.kz" class="ourP">@lang('a.med')</a></li>
+				<li><a href="#" target="_blank" class="ourP">Тұсай кесер</a></li>
+				<li><a href="#" target="_blank" class="ourP">День именниника</a></li>
 			</ul>
 		</div>
-		<a href="/news" class="news">@lang('a.news')</a>
-		<a href="/mass-media-about-us" class="massMedia">@lang('a.smi')</a>
-		<a href="/galleries" class="gallery">Галерея</a>
-		<a href="/donations" class="pjr">@lang('a.don')</a>
-		<a href="/contacts" class="contacts">@lang('a.contacts')</a>
+		<div class="dropdownN">
+			<a href="/news" class="news">@lang('a.news')</a>
+			<ul class="dropdownNew">
+				<li><a href="/mass-media-about-us" class="massMedia">@lang('a.smi')</a></li>
+			</ul>
+		</div>	
+		<!-- <a href="/galleries" class="gallery">Галерея</a> -->
+		<div class="dropdownH">
+			<a href="/help-is-needed" class="pjr">@lang('a.helpIsNeeded')</a>
+			<ul class="dropdownHelp">
+				<li><a href="/contacts" class="contacts">@lang('a.contacts')</a></li>
+			</ul>
+		</div>
+		<a href="/donations" class="iWantToHelp">@lang('a.iWantToHelp')</a>
 	</div>
 </div>	
