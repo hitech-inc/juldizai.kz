@@ -22,6 +22,10 @@
 	<!-- Yandex map API -->
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
     </script>
+
+    <!-- Slick slider -->
+    <link rel="stylesheet" type="text/css" href="/css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/slick-theme.css"/>
 </head>
 <body>
 	<header>
@@ -35,9 +39,28 @@
 	</footer>
 	
 	<script src="/js/jquery.js"></script>
+	<!-- Slick slider -->
+	<script type="text/javascript" src="/js/slick.min.js"></script>
 	<script src="/js/jquery-ui.min.js"></script>
 	<script src="/js/owl.carousel.min.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 	<script src="/js/app.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			@yield('scripts');
+			
+			$('.banner-slider').slick({
+				dots: true,
+			    infinite: true,
+			    speed: 300,
+			    slidesToShow: 1,
+			    adaptiveHeight: true,
+			    autoplay: true,
+  				autoplaySpeed: 2000,
+			});
+		});
+	</script>
+
 </body>
 </html>

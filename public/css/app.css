@@ -479,8 +479,9 @@ pre {
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px; }
+  /*margin-right: -15px;
+  margin-left: -15px; */
+}
 
 .no-gutters {
   margin-right: 0;
@@ -6916,3 +6917,41 @@ footer {
     line-height: 70px;
     font-size: 1.3em;
     text-transform: uppercase; }
+
+
+.slides{
+  height: 310px;
+}
+
+.slides img{
+  width: 100%;
+  max-width: 1920px;
+}
+
+.topBlock{
+  position: relative;
+}
+
+
+.lang{
+  z-index: 999;
+}
+
+.leftBlock{
+  float: left;
+}
+
+.rBlock, .lBlock{
+  position: relative;
+}
+
+a.bannerTitle{
+  top: 150px;
+  left: 70%;
+}
+
+.logoL{
+  position: absolute;
+  top: 35%;
+  left: 40%;
+}

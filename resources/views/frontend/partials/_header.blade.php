@@ -187,7 +187,7 @@ ul.dropdown li a.ourP{
 	padding: 0 20px !important;
 }
 </style>
-<div class="container">
+<div class="container" style="padding: 0">
 	<div class="row" id="socialLinks">
 		<div class="col-4">
 			<a href="https://www.instagram.com/bi_juldizai_fond/" target="_blank" title="@lang('a.insta')"><img src="/img/header/instagram.jpg" alt="link_social"></a>
@@ -199,15 +199,40 @@ ul.dropdown li a.ourP{
 			<a href="https://www.youtube.com/channel/UClPHkASw7zZ-CBnXZ9LsosQ?view_as=subscriber" target="_blank" title="@lang('a.yt')"><img src="/img/header/youtube.jpg" alt="link_social"></a>
 		</div>
 	</div>
-	<div class="row" id="banner">
-		<a href="/galleries" title="Перейти в галерею"><img src="/img/header/girl.png" alt="banner"></a>
-		<a href="/" title="Перейти на главную" style="cursor: pointer;"><img src="/img/logo2.png" alt="logo" class="logo"></a>
-		<a href="/galleries" class="bannerTitle" title="Перейти в галерею">@lang('a.header')</a>
+	<div class="topBlock">
 		<div class="lang">
 			<a href="/lang/kz">KZ</a>
 			<a href="/lang/ru">RU</a>
 		</div>
+
+		<div class="banner-slider">
+			<div class="slides" id="banner">
+				<div class="leftBlock">
+					<div class="rBlock">
+						<a href="/galleries" title="Перейти в галерею" class=""><img src="/img/header/girl.png" alt="banner"></a>
+						<a href="/" title="Перейти на главную" style="cursor: pointer;" class="logoL"><img src="/img/logo2.png" alt="logo" class="logo" style="width: 200px;"></a>
+					</div>
+				</div>
+				<div class="rightBlock">
+					<div class="lBlock">
+						<a href="/galleries" class="bannerTitle" title="Перейти в галерею">@lang('a.header')</a>
+					</div>
+				</div>
+			</div>
+			<div class="slides"><img src="/img/slider/slide1.jpg" alt=""></div>
+			<div class="slides"><img src="/img/slider/slide2.jpg" alt=""></div>
+			<div class="slides"><img src="/img/slider/slide3.jpg" alt=""></div>
+		</div>
 	</div>
+	<!-- <div class="row" id="banner">
+			<div class="slides"><a href="/galleries" title="Перейти в галерею"><img src="/img/header/girl.png" alt="banner"></a>
+		<a href="/" title="Перейти на главную" style="cursor: pointer;"><img src="/img/logo2.png" alt="logo" class="logo" style="width: 200px;"></a>
+		<a href="/galleries" class="bannerTitle" title="Перейти в галерею">@lang('a.header')</a></div>
+		<div class="lang">
+			<a href="/lang/kz">KZ</a>
+			<a href="/lang/ru">RU</a>
+		</div>
+	</div> -->
 	<div class="row" id="menu">
 		<a href="/" class="main">@lang('a.main')</a>
 		<div class="dropdownB">
@@ -237,3 +262,4 @@ ul.dropdown li a.ourP{
 		<a href="/donations" class="iWantToHelp">@lang('a.iWantToHelp')</a>
 	</div>
 </div>	
+

@@ -94,6 +94,7 @@ class SiteController extends Controller
     public function gallery(Request $request, $id = "")
     {
         $lang = session('lang');
+        //dd($lang);
         App::setLocale($lang);
 
     	if (!$id)
@@ -101,6 +102,7 @@ class SiteController extends Controller
     		$currentURL = \Request::segment(1);
     		$menus = $this->getMenu();
 	    	$galleries = Gallery::where('lang',$lang)->get();
+            //$galleries = Gallery::all();
 	    	//dd($galleries);
 	    	return view('frontend.galleries', compact('menus', 'galleries', 'currentURL'));
     	}
