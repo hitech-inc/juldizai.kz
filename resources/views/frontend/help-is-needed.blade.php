@@ -9,6 +9,6 @@
   	@endif
 </style>
 <div class="container">
-	<h1>Перечень документов</h1>
+	<h1>@lang('a.docs')</h1>
 </div>
 @endsection

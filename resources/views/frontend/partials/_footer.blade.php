@@ -31,8 +31,9 @@
 		</div>
 		<!-- <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p> -->
 		<div class="row">
+			
+			<h4 style="text-align: center; padding-top: 15px; width: 100%; font-family: DinProCondBold;">@lang('a.footer')</h4>
 			@foreach(App\Models\Requisite::getRequisites() as $requisite)
-			<h4 style="text-align: center; padding-top: 15px; width: 100%; font-family: DinProCondBold;">{{$requisite->title}}</h4>
 			<ul style="list-style: none; padding-left: 65px; width: 33%;" class="requisites">
 				<li><a href="#">@lang('a.pay'){{ $requisite->payment_via }}</a></li>
 				<li><a href="#">WebMoney: {{ $requisite->payment_via }}</a></li>
@@ -57,7 +58,6 @@
 		<a href="/news">@lang('a.news')</a>
 		<a href="/mass-media-about-us">@lang('a.smi')</a>
 		<a href="/galleries">Галерея</a>
-		<a href="/donations">@lang('a.don')</a>
 		<a href="/contacts">@lang('a.contacts')</a>
 	</div>
 </div>

@@ -25,8 +25,8 @@ class SiteController extends Controller
             } else {
                 $lang = 'ru';
             }
-
             App::setLocale($lang);
+            
 
     		$currentURL = \Request::segment(1);
 	    	$menus = $this->getMenu();
@@ -37,6 +37,11 @@ class SiteController extends Controller
     	}
     	else
     	{
+            if(session('lang')){
+                $lang = session('lang');
+            } else {
+                $lang = 'ru';
+            }
             App::setLocale($lang);
             
     		$menus = $this->getMenu();
@@ -48,7 +53,11 @@ class SiteController extends Controller
 
     public function contacts()
     {
-        $lang = session('lang');
+        if(session('lang')){
+            $lang = session('lang');
+        } else {
+            $lang = 'ru';
+        }
         App::setLocale($lang);
 
     	$currentURL = \Request::segment(1);
@@ -59,7 +68,11 @@ class SiteController extends Controller
 
     public function news(Request $request, $id = "")
     {
-        $lang = session('lang');
+        if(session('lang')){
+            $lang = session('lang');
+        } else {
+            $lang = 'ru';
+        }
         App::setLocale($lang);
 
     	if (!$id)
@@ -81,8 +94,13 @@ class SiteController extends Controller
 
     public function massMedia()
     {
-        $lang = session('lang');
+        if(session('lang')){
+            $lang = session('lang');
+        } else {
+            $lang = 'ru';
+        }
         App::setLocale($lang);
+
 
     	$currentURL = \Request::segment(1);
     	$menus = $this->getMenu();
@@ -93,9 +111,13 @@ class SiteController extends Controller
 
     public function gallery(Request $request, $id = "")
     {
-        $lang = session('lang');
-        //dd($lang);
+        if(session('lang')){
+            $lang = session('lang');
+        } else {
+            $lang = 'ru';
+        }
         App::setLocale($lang);
+
 
     	if (!$id)
     	{
@@ -117,8 +139,13 @@ class SiteController extends Controller
 
     public function projects()
     {
-        $lang = session('lang');
+        if(session('lang')){
+            $lang = session('lang');
+        } else {
+            $lang = 'ru';
+        }
         App::setLocale($lang);
+
 
     	$currentURL = \Request::segment(1);
     	$projects = Project::where('lang',$lang)->get();
@@ -132,7 +159,13 @@ class SiteController extends Controller
 
     public function getMenu()
     {
-        $lang = session('lang');
+        if(session('lang')){
+            $lang = session('lang');
+        } else {
+            $lang = 'ru';
+        }
+        App::setLocale($lang);
+
         
     	$menus = Menu::where('lang',$lang)->get();
     	// $menus = testmenu::where('parent_id', null)->get();
@@ -151,12 +184,19 @@ class SiteController extends Controller
         App::setLocale($language);
         session(['lang' => $language]);
         $lang = session('lang');
-        return self::index();
+        return back();
     }
 
     public function helpIsNeeded()
     {
+        if(session('lang')){
+            $lang = session('lang');
+        } else {
+            $lang = 'ru';
+        }
+        App::setLocale($lang);
         $currentURL = \Request::segment(1);
+
         return view('frontend.help-is-needed', compact('currentURL'));
     }
 

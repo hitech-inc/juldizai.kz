@@ -119,17 +119,22 @@
 		<div class="col-4">
 			<div class="row">
 				@foreach( $news as $new )
-				<div class="col-6">
-					<span></span>
-					<span>{{ $new->created_at }}</span>
-					<div class="clear"></div>
-					<div class="newsImg"></div>
-					<h4>{{ $new->title }}</h4>
-					<p>{!! $new->text !!}</p>
-					<a href="{{ url('news/' . $new->slug)}}">@lang('a.read') ></a>
-				</div>
-				@endforeach
-				<a href="/news" target="_blank" style="font-size: 1.4rem">@lang('a.allnews')</a>
+
+					<div class="col-6">
+						<a href="/news">
+							<span></span>
+							<span>{{ $new->created_at }}</span>
+							<div class="clear"></div>
+							<div class="newsImg"></div>
+							<h4>{{ $new->title }}</h4>
+							<p>{!! $new->text !!}</p>
+							<p href="{{ url('news/' . $new->slug)}}">@lang('a.read') ></p>
+						</a>
+					</div>
+
+					@endforeach
+					<a href="/news" target="_blank" style="font-size: 1.4rem">@lang('a.allnews')</a>
+
 			</div>
 		</div>
 

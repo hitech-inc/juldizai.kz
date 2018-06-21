@@ -208,19 +208,19 @@ ul.dropdown li a.ourP{
 				<div class="slides" id="banner">
 					<div class="leftBlock">
 						<div class="rBlock">
-							<a href="/galleries" title="Перейти в галерею" class=""><img src="/img/header/girl.png" alt="banner"></a>
-							<a href="/" title="Перейти на главную" style="cursor: pointer;" class="logoL"><img src="/img/logo2.png" alt="logo" class="logo" style="width: 200px;"></a>
+							<a href="/galleries" title="@lang('a.togo')" class=""><img src="/img/header/girl.png" alt="banner"></a>
+							<a href="/" title="@lang('a.togohome')" style="cursor: pointer;" class="logoL"><img src="/img/logo2.png" alt="logo" class="logo" style="width: 200px;"></a>
 						</div>
 					</div>
 					<div class="rightBlock">
 						<div class="lBlock">
-							<a href="/galleries" class="bannerTitle" title="Перейти в галерею">@lang('a.header')</a>
+							<a href="/galleries" class="bannerTitle" title="@lang('a.togo')">@lang('a.header')</a>
 						</div>
 					</div>
 				</div>
-				<div class="slides"><a href="/galleries" title="Перейти в галерею"><img src="/img/slider/slide1.jpg" alt=""></div></a>
-				<div class="slides"><a href="/galleries" title="Перейти в галерею"><img src="/img/slider/slide2.jpg" alt=""></div></a>
-				<div class="slides"><a href="/galleries" title="Перейти в галерею"><img src="/img/slider/slide3.jpg" alt=""></div></a>
+				<div class="slides c22"><a href="/galleries" class="testi" title="@lang('a.togo')" style="background-image: url('/img/slider/slide1.jpg');background-size: cover;background-position: center;"></a></div>
+				<div class="slides c22"><a href="/galleries" class="testi" title="@lang('a.togo')" style="background-image: url('/img/slider/slide2.jpg');background-size: cover;background-position: center -300px;"></a></div>
+				<div class="slides c22"><a href="/galleries" class="testi" title="@lang('a.togo')" style="background-image: url('/img/slider/slide3.jpg');background-size: cover;background-position: center -50px;"></a></div>
 			</div>
 	</div>
 	<!-- <div class="row" id="banner">
@@ -241,8 +241,8 @@ ul.dropdown li a.ourP{
 				<li><a href="http://fest.juldizai.kz/" target="_blank" class="ourP">@lang('a.fest')</a></li>
 				<li><a href="http://sport.juldizai.kz/" target="_blank" class="ourP">Спартакиада</a></li>
 				<li><a href="http://centr.juldizay.kz" class="ourP">@lang('a.med')</a></li>
-				<li><a href="#" target="_blank" class="ourP">Тұсай кесер</a></li>
-				<li><a href="#" target="_blank" class="ourP">День именниника</a></li>
+				<li><a href="#" target="_blank" class="ourP">Тұсау кесер</a></li>
+				<li><a href="#" target="_blank" class="ourP">День именинника</a></li>
 			</ul>
 		</div>
 		<div class="dropdownN">
